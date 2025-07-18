@@ -18,7 +18,7 @@ Robots plan safe, efficient trajectories using MPC while forecasting human motio
 
 ## 📁 Package Structure
 
-human_aware_coverage/
+<pre> <code>```nonehuman_aware_coverage/
 ├── config/ # Configuration and tuning parameters
 ├── launch/ # Launch files for simulation or real robots
 ├── scripts/ # Human prediction and support tools
@@ -27,7 +27,7 @@ human_aware_coverage/
 ├── worlds/ # Custom Gazebo worlds (optional)
 ├── msg/ # Custom ROS messages (if used)
 ├── srv/ # Custom services (if used)
-├── README.md # This file
+├── README.md # This file```</code> </pre>
 
 
 ---
@@ -56,11 +56,11 @@ This package was developed and tested using **ROS Noetic** (Ubuntu 20.04). The f
 ```bash
 # Clone into your catkin workspace
 cd ~/catkin_ws/src
-git clone https://github.com/yourusername/human_aware_coverage.git
+git clone https://github.com/ARSControl/hmpcc.git
 
 # Build the workspace
 cd ~/catkin_ws
-catkin_make
+catkin build
 
 # Source the workspace
 source devel/setup.bash
@@ -122,7 +122,7 @@ This will:
 | ------------------ | ------------------------------------ | ------------------- |
 | `world_name`       | Gazebo world file                    | `myworld.world`     |
 | `v_max`            | Max linear velocity                  | `0.3`               |
-| `w_max`            | Max angular velocity                  | `0.5`              |
+| `w_max`            | Max angular velocity                 | `0.5`               |
 
 ## 📈 Example Results
 Below are example behaviors observed in simulation:
@@ -133,16 +133,16 @@ Below are example behaviors observed in simulation:
 
 - Smooth, real-time replanning observed under dynamic human motion.
 
-[Include GIFs or screenshots of simulation results here]
+![Demo](media/gazebo_top1.gif)
 
 ### 📄 Publications & References
 This package is based on concepts from:
 
 ``` bibtex
-@article{yourpaper2025,
-  title={Human-Aware Multi-Robot Coverage Using MPC and Trajectory Prediction},
-  author={Your Name and Collaborators},
-  journal={IEEE Robotics and Automation Letters},
+@article{catellani2025hmpcc,
+  title={HMPCC: Human-Aware Model Predictive Coverage Control},
+  author={Mattia Catellani, Marta Gabbi, Lorenzo Sabattini},
+  journal={IEEE International Symposium on Multi-Robot & Multi-Agent Systems (MRS)},
   year={2025}
 }
 ```
