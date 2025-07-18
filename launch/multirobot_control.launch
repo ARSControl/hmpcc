@@ -1,0 +1,52 @@
+<launch>
+
+    <arg name="robot_range"         default="8.0"/>
+    <arg name="v_max"         default="0.3"/>
+    <arg name="w_max"         default="0.5"/>
+    
+    <rosparam file="$(find hmpcc)/config/config.yaml" command="load" />
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="0" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+        <arg name="save_video"           value="true" />
+    </include>
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="1" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+    </include>
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="2" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+    </include>
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="3" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+    </include>
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="4" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+    </include>
+
+    <include file="$(find hmpcc)/launch/robot_control.launch" >
+        <arg name="id"                    value="5" />
+        <arg name="robot_range"           value="$(arg robot_range)" />
+        <arg name="v_max"                 value="$(arg v_max)" />
+        <arg name="w_max"                 value="$(arg w_max)" />
+    </include>
+
+</launch>

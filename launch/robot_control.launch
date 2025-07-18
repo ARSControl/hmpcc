@@ -1,0 +1,19 @@
+<launch>
+
+    <arg name="id"                      default="0"/>
+    <arg name="robot_range"             default="5.0"/>
+    <arg name="v_max"                   default="0.3"/>
+    <arg name="w_max"                   default="0.5"/>
+    <arg name="graphics_on"             default="false"/>
+    <arg name="save_video"             default="false"/>
+
+    <node name="hr_coverage_$(arg id)" pkg="hmpcc" type="hr_mpcc.py" output="screen">
+        <param name="id"                    value="$(arg id)" />
+        <param name="robot_range"           value="$(arg robot_range)" />
+        <param name="v_max"                 value="$(arg v_max)" />
+        <param name="w_max"                 value="$(arg w_max)" />
+        <param name="graphics_on"                 value="$(arg graphics_on)" />
+        <param name="save_video"                 value="$(arg save_video)" />
+    </node>
+
+</launch>

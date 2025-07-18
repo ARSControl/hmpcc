@@ -1,0 +1,23 @@
+<launch>
+  <!-- <arg name="world_file" default="$(find gazebo_ros)/worlds/empty.world"/> -->
+  <arg name="id" default="0" />
+  <arg name="ros_topic" default="/actor_pose" />
+  <arg name="namespace" default="/human_$(arg id)" />
+
+  <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_file)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+  </include> -->
+
+  <node name="spawn_actor_$(arg id)" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-file $(find hmpcc)/models/person_walking_$(arg id)/model.sdf -sdf -model person_walking_$(arg id) -y $(arg id)"/>
+
+<!-- <node name="spawn_actor_1" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-file $(find hmpcc)/models/person_walking_1/model.sdf -sdf -model person_walking_1 -y 2"/>
+
+        <node name="spawn_actor_2" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-file $(find hmpcc)/models/person_walking_2/model.sdf -sdf -model person_walking_2 -y -2"/> -->
+
+</launch>
