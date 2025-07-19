@@ -18,16 +18,15 @@ Robots plan safe, efficient trajectories using MPC while forecasting human motio
 
 ## 📁 Package Structure
 
-<pre> <code>```nonehuman_aware_coverage/
+<pre><code>
+hmpcc/
 ├── config/ # Configuration and tuning parameters
 ├── launch/ # Launch files for simulation or real robots
-├── scripts/ # Human prediction and support tools
+├── scripts/ # HMPCC evaluation scripts
 ├── src/ # Core algorithm implementation
-├── urdf/ # Robot description files
 ├── worlds/ # Custom Gazebo worlds (optional)
-├── msg/ # Custom ROS messages (if used)
-├── srv/ # Custom services (if used)
-├── README.md # This file```</code> </pre>
+├── README.md # This file
+</code></pre>
 
 
 ---
